@@ -14,6 +14,9 @@ const router=express.Router();
 //path for register request
 router.post('/user/register',userController.register)
 
+//path to resolve login
+router.post('/user/login',userController.login)
+
 
 //export router
 module.exports=router;

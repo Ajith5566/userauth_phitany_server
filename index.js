@@ -10,6 +10,7 @@ const cors = require('cors');
 // import router
 const router = require('./Router/router'); 
 
+
 // import DB connection
 require('./DB/connection');  // ensures DB connects before server starts
 
@@ -22,8 +23,13 @@ todoServer.use(cors());
 // 6) convert json to JS object
 todoServer.use(express.json());
 
+
+
 // 7) use router
 todoServer.use(router);
+
+//import app middleware
+
 
 // 8) set port correctly
 const PORT = process.env.PORT || 4000;
